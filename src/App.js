@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Panel from "./Panel";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="jumbotron">
+        <h4 className="display-4">Ethereum Airline!</h4>
+      </div>
+      <div className="row">
+        <div className="col-sm">
+          <Panel title="Balance" />
+        </div>
+        <div className="col-sm">
+          <Panel title="Loyalty points - refundable ether" />
+        </div>
+      </div>
+      <div className="row">
+        <div className="col-sm">
+          <Panel title="Available flights" />
+        </div>
+        <div className="col-sm">
+          <Panel title="Your flights" />
+        </div>
+      </div>
+    </>
   );
-}
+};
 
 export default App;
