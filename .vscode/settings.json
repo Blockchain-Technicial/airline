@@ -1,0 +1,4 @@
+{
+    "solidity.compileUsingLocalVersion": "lastest",
+    "solidity.defaultCompiler": "localNodeModule"
+}

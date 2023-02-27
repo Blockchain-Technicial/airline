@@ -1,0 +1,3019 @@
+{
+    "contractName": "Airline",
+    "abi": [
+        {
+            "inputs": [],
+            "stateMutability": "nonpayable",
+            "type": "constructor"
+        },
+        {
+            "anonymous": false,
+            "inputs": [
+                {
+                    "indexed": true,
+                    "internalType": "address",
+                    "name": "customer",
+                    "type": "address"
+                },
+                {
+                    "indexed": false,
+                    "internalType": "uint256",
+                    "name": "price",
+                    "type": "uint256"
+                }
+            ],
+            "name": "FlightPurchased",
+            "type": "event"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "flightIndex",
+                    "type": "uint256"
+                }
+            ],
+            "name": "buyFlight",
+            "outputs": [],
+            "stateMutability": "payable",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "customerFlights",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "customerTotalFlights",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "name": "customers",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "loyaltyPoints",
+                    "type": "uint256"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "totalFlights",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "name": "flights",
+            "outputs": [
+                {
+                    "internalType": "string",
+                    "name": "name",
+                    "type": "string"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "price",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getAirlineBalance",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "getRefundableEther",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "owner",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "redeemLoyaltyPoints",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "totalFlights",
+            "outputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "",
+                    "type": "uint256"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.6+commit.11564f7e\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"customer\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"name\":\"FlightPurchased\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"flightIndex\",\"type\":\"uint256\"}],\"name\":\"buyFlight\",\"outputs\":[],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"customerFlights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"customerTotalFlights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"customers\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"loyaltyPoints\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"totalFlights\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"flights\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getAirlineBalance\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getRefundableEther\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"redeemLoyaltyPoints\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalFlights\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/abracu/Projects/solidity/ethereum-airline/contracts/Airline.sol\":\"Airline\"},\"evmVersion\":\"berlin\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/abracu/Projects/solidity/ethereum-airline/contracts/Airline.sol\":{\"keccak256\":\"0x48e48f7e704d77850b2c71278345bc4e5057f15c5c75157a2db9db5684edacc3\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://90572be9dde31b969fc4aef1660edb5e300814f2e9d24c546d7bd9ea3f85d5a5\",\"dweb:/ipfs/QmVDJa8MMztVwwz6eayuaoawPb4HRJjd97cfqtcR9QiwBz\"]}},\"version\":1}",
+    "bytecode": "60806040526706f05b59d3b2000060015534801561001c57600080fd5b50600080546001600160a01b0319163317815560408051608081018252600591810191825264546f6b796f60d81b606082015290815268056bc75e2d6310000060208083019190915260028054600181018255938190528251805193949091026000805160206109fc833981519152019261009a928492019061019e565b50602091820151600191820155604080516080810182526008918101918252675368616e6768616960c01b6060820152908152680821ab0d4414980000818401526002805492830181556000819052815180519294939091026000805160206109fc83398151915201926101139284929091019061019e565b50602091820151600191820155604080516080810182526008918101918252674e657720596f726b60c01b6060820152908152680ad78ebc5ac6200000818401526002805492830181556000819052815180519294939091026000805160206109fc833981519152019261018c9284929091019061019e565b50602082015181600101555050610272565b8280546101aa90610237565b90600052602060002090601f0160209004810192826101cc5760008555610212565b82601f106101e557805160ff1916838001178555610212565b82800160010185558215610212579182015b828111156102125782518255916020019190600101906101f7565b5061021e929150610222565b5090565b5b8082111561021e5760008155600101610223565b600181811c9082168061024b57607f821691505b6020821081141561026c57634e487b7160e01b600052602260045260246000fd5b50919050565b61077b806102816000396000f3fe6080604052600436106100915760003560e01c80634bf02e7a116100595780634bf02e7a1461016357806381959427146101785780638da5cb5b14610198578063f269365a146101d0578063f997114f146101fd57600080fd5b80630ca97e481461009657806315ccf70f146100ab5780632411ff73146100e257806329cd30b414610105578063336989ae1461011a575b600080fd5b6100a96100a4366004610616565b610212565b005b3480156100b757600080fd5b506100cb6100c6366004610616565b6103ec565b6040516100d992919061062f565b60405180910390f35b3480156100ee57600080fd5b506100f76104a8565b6040519081526020016100d9565b34801561011157600080fd5b506100f76104ca565b34801561012657600080fd5b5061014e6101353660046105ca565b6003602052600090815260409020805460019091015482565b604080519283526020830191909152016100d9565b34801561016f57600080fd5b506002546100f7565b34801561018457600080fd5b506100f76101933660046105ec565b610524565b3480156101a457600080fd5b506000546101b8906001600160a01b031681565b6040516001600160a01b0390911681526020016100d9565b3480156101dc57600080fd5b506100f76101eb3660046105ca565b60056020526000908152604090205481565b34801561020957600080fd5b506100a9610555565b6000600282815481106102275761022761072f565b9060005260206000209060020201604051806040016040529081600082018054610250906106c3565b80601f016020809104026020016040519081016040528092919081815260200182805461027c906106c3565b80156102c95780601f1061029e576101008083540402835291602001916102c9565b820191906000526020600020905b8154815290600101906020018083116102ac57829003601f168201915b5050505050815260200160018201548152505090508060200151341461032c5760405162461bcd60e51b815260206004820152601360248201527224b739bab33334b1b4b2b73a10333ab732399760691b60448201526064015b60405180910390fd5b3360009081526003602052604081208054909160059183919061035090849061068c565b90915550506001818101805460009061036a90849061068c565b9091555050336000818152600460209081526040808320805460018101825590845282842001879055928252600590529081208054916103a9836106fe565b909155505060208083015160405190815233917f8644b0eb56c7a568d35c9f35feeacfcdb42c3cfe3deb99e35d6ac27df853a08c910160405180910390a2505050565b600281815481106103fc57600080fd5b906000526020600020906002020160009150905080600001805461041f906106c3565b80601f016020809104026020016040519081016040528092919081815260200182805461044b906106c3565b80156104985780601f1061046d57610100808354040283529160200191610498565b820191906000526020600020905b81548152906001019060200180831161047b57829003601f168201915b5050505050908060010154905082565b336000908152600360205260408120546001546104c591906106a4565b905090565b600080546001600160a01b0316331461051e5760405162461bcd60e51b81526020600482015260166024820152752cb7ba9030b932903737ba103a34329037bbb732b91760511b6044820152606401610323565b50303190565b6004602052816000526040600020818154811061054057600080fd5b90600052602060002001600091509150505481565b336000908152600360205260408120805460015491929161057691906106a4565b604051909150339082156108fc029083906000818181858888f193505050501580156105a6573d6000803e3d6000fd5b505060009055565b80356001600160a01b03811681146105c557600080fd5b919050565b6000602082840312156105dc57600080fd5b6105e5826105ae565b9392505050565b600080604083850312156105ff57600080fd5b610608836105ae565b946020939093013593505050565b60006020828403121561062857600080fd5b5035919050565b604081526000835180604084015260005b8181101561065d5760208187018101516060868401015201610640565b8181111561066f576000606083860101525b50602083019390935250601f91909101601f191601606001919050565b6000821982111561069f5761069f610719565b500190565b60008160001904831182151516156106be576106be610719565b500290565b600181811c908216806106d757607f821691505b602082108114156106f857634e487b7160e01b600052602260045260246000fd5b50919050565b600060001982141561071257610712610719565b5060010190565b634e487b7160e01b600052601160045260246000fd5b634e487b7160e01b600052603260045260246000fdfea2646970667358221220af5d3cb8d6627df04e31170bc30144754bdba2b03eb6fe66e6483c0ae06fcc4264736f6c63430008060033405787fa12a823e0f2b7631cc41b3ba8828b3321ca811111fa75cd3aa3bb5ace",
+    "deployedBytecode": "6080604052600436106100915760003560e01c80634bf02e7a116100595780634bf02e7a1461016357806381959427146101785780638da5cb5b14610198578063f269365a146101d0578063f997114f146101fd57600080fd5b80630ca97e481461009657806315ccf70f146100ab5780632411ff73146100e257806329cd30b414610105578063336989ae1461011a575b600080fd5b6100a96100a4366004610616565b610212565b005b3480156100b757600080fd5b506100cb6100c6366004610616565b6103ec565b6040516100d992919061062f565b60405180910390f35b3480156100ee57600080fd5b506100f76104a8565b6040519081526020016100d9565b34801561011157600080fd5b506100f76104ca565b34801561012657600080fd5b5061014e6101353660046105ca565b6003602052600090815260409020805460019091015482565b604080519283526020830191909152016100d9565b34801561016f57600080fd5b506002546100f7565b34801561018457600080fd5b506100f76101933660046105ec565b610524565b3480156101a457600080fd5b506000546101b8906001600160a01b031681565b6040516001600160a01b0390911681526020016100d9565b3480156101dc57600080fd5b506100f76101eb3660046105ca565b60056020526000908152604090205481565b34801561020957600080fd5b506100a9610555565b6000600282815481106102275761022761072f565b9060005260206000209060020201604051806040016040529081600082018054610250906106c3565b80601f016020809104026020016040519081016040528092919081815260200182805461027c906106c3565b80156102c95780601f1061029e576101008083540402835291602001916102c9565b820191906000526020600020905b8154815290600101906020018083116102ac57829003601f168201915b5050505050815260200160018201548152505090508060200151341461032c5760405162461bcd60e51b815260206004820152601360248201527224b739bab33334b1b4b2b73a10333ab732399760691b60448201526064015b60405180910390fd5b3360009081526003602052604081208054909160059183919061035090849061068c565b90915550506001818101805460009061036a90849061068c565b9091555050336000818152600460209081526040808320805460018101825590845282842001879055928252600590529081208054916103a9836106fe565b909155505060208083015160405190815233917f8644b0eb56c7a568d35c9f35feeacfcdb42c3cfe3deb99e35d6ac27df853a08c910160405180910390a2505050565b600281815481106103fc57600080fd5b906000526020600020906002020160009150905080600001805461041f906106c3565b80601f016020809104026020016040519081016040528092919081815260200182805461044b906106c3565b80156104985780601f1061046d57610100808354040283529160200191610498565b820191906000526020600020905b81548152906001019060200180831161047b57829003601f168201915b5050505050908060010154905082565b336000908152600360205260408120546001546104c591906106a4565b905090565b600080546001600160a01b0316331461051e5760405162461bcd60e51b81526020600482015260166024820152752cb7ba9030b932903737ba103a34329037bbb732b91760511b6044820152606401610323565b50303190565b6004602052816000526040600020818154811061054057600080fd5b90600052602060002001600091509150505481565b336000908152600360205260408120805460015491929161057691906106a4565b604051909150339082156108fc029083906000818181858888f193505050501580156105a6573d6000803e3d6000fd5b505060009055565b80356001600160a01b03811681146105c557600080fd5b919050565b6000602082840312156105dc57600080fd5b6105e5826105ae565b9392505050565b600080604083850312156105ff57600080fd5b610608836105ae565b946020939093013593505050565b60006020828403121561062857600080fd5b5035919050565b604081526000835180604084015260005b8181101561065d5760208187018101516060868401015201610640565b8181111561066f576000606083860101525b50602083019390935250601f91909101601f191601606001919050565b6000821982111561069f5761069f610719565b500190565b60008160001904831182151516156106be576106be610719565b500290565b600181811c908216806106d757607f821691505b602082108114156106f857634e487b7160e01b600052602260045260246000fd5b50919050565b600060001982141561071257610712610719565b5060010190565b634e487b7160e01b600052601160045260246000fd5b634e487b7160e01b600052603260045260246000fdfea2646970667358221220af5d3cb8d6627df04e31170bc30144754bdba2b03eb6fe66e6483c0ae06fcc4264736f6c63430008060033",
+    "sourceMap": "61:1996:0:-:0;;;285:9;264:30;;563:205;;;;;;;;;-1:-1:-1;587:5:0;:18;;-1:-1:-1;;;;;;587:18:0;595:10;587:18;;;628:26;;;;;;;;;;;;;;;-1:-1:-1;;;628:26:0;;;;;;;644:9;628:26;;;;;;;;615:7;:40;;587:18;615:40;;;;;;;;;;;;628:26;;615:40;;;-1:-1:-1;;;;;;;;;;;615:40:0;;;;;;;;;:::i;:::-;-1:-1:-1;615:40:0;;;;;;;;;;678:29;;;;;;;;;;;;;;;-1:-1:-1;;;678:29:0;;;;;;;697:9;678:29;;;;665:7;:43;;;;;;;-1:-1:-1;665:43:0;;;;;;;678:29;;665:43;;;;-1:-1:-1;;;;;;;;;;;665:43:0;;;;;;;;;;;:::i;:::-;-1:-1:-1;665:43:0;;;;;;;;;;731:29;;;;;;;;;;;;;;;-1:-1:-1;;;731:29:0;;;;;;;750:9;731:29;;;;718:7;:43;;;;;;;-1:-1:-1;718:43:0;;;;;;;731:29;;718:43;;;;-1:-1:-1;;;;;;;;;;;718:43:0;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;61:1996;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;61:1996:0;;;-1:-1:-1;61:1996:0;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;14:380:1;93:1;89:12;;;;136;;;157:2;;211:4;203:6;199:17;189:27;;157:2;264;256:6;253:14;233:18;230:38;227:2;;;310:10;305:3;301:20;298:1;291:31;345:4;342:1;335:15;373:4;370:1;363:15;227:2;;69:325;;;:::o;:::-;61:1996:0;;;;;;",
+    "deployedSourceMap": "61:1996:0:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;774:502;;;;;;:::i;:::-;;:::i;:::-;;301:23;;;;;;;;;;-1:-1:-1;301:23:0;;;;;:::i;:::-;;:::i;:::-;;;;;;;;:::i;:::-;;;;;;;;1645:132;;;;;;;;;;;;;:::i;:::-;;;2538:25:1;;;2526:2;2511:18;1645:132:0;2493:76:1;1783:160:0;;;;;;;;;;;;;:::i;331:45::-;;;;;;;;;;-1:-1:-1;331:45:0;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;2748:25:1;;;2804:2;2789:18;;2782:34;;;;2721:18;331:45:0;2703:119:1;1282:89:0;;;;;;;;;;-1:-1:-1;1350:7:0;:14;1282:89;;382:49;;;;;;;;;;-1:-1:-1;382:49:0;;;;;:::i;:::-;;:::i;85:20::-;;;;;;;;;;-1:-1:-1;85:20:0;;;;-1:-1:-1;;;;;85:20:0;;;;;;-1:-1:-1;;;;;991:32:1;;;973:51;;961:2;946:18;85:20:0;928:102:1;437:53:0;;;;;;;;;;-1:-1:-1;437:53:0;;;;;:::i;:::-;;;;;;;;;;;;;;1377:262;;;;;;;;;;;;;:::i;774:502::-;836:20;859:7;867:11;859:20;;;;;;;;:::i;:::-;;;;;;;;;;;836:43;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;910:6;:12;;;897:9;:25;889:57;;;;-1:-1:-1;;;889:57:0;;2246:2:1;889:57:0;;;2228:21:1;2285:2;2265:18;;;2258:30;-1:-1:-1;;;2304:18:1;;;2297:49;2363:18;;889:57:0;;;;;;;;;995:10;957:25;985:21;;;:9;:21;;;;;1016:27;;985:21;;1042:1;;985:21;;957:25;1016:27;;1042:1;;1016:27;:::i;:::-;;;;-1:-1:-1;;1078:1:0;1053:21;;;:26;;:21;;:26;;1078:1;;1053:26;:::i;:::-;;;;-1:-1:-1;;1105:10:0;1089:27;;;;:15;:27;;;;;;;;:45;;;;;;;;;;;;;;;;;1177:32;;;:20;:32;;;;;:35;;;;;;:::i;:::-;;;;-1:-1:-1;;1256:12:0;;;;;1228:41;;2538:25:1;;;1244:10:0;;1228:41;;2511:18:1;1228:41:0;;;;;;;826:450;;774:502;:::o;301:23::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1645:132::-;1745:10;1696:4;1735:21;;;:9;:21;;;;;:35;1719:13;;:51;;1735:35;1719:51;:::i;:::-;1712:58;;1645:132;:::o;1783:160::-;1843:4;2002:5;;-1:-1:-1;;;;;2002:5:0;1988:10;:19;1980:54;;;;-1:-1:-1;;;1980:54:0;;1895:2:1;1980:54:0;;;1877:21:1;1934:2;1914:18;;;1907:30;-1:-1:-1;;;1953:18:1;;;1946:52;2015:18;;1980:54:0;1867:172:1;1980:54:0;-1:-1:-1;1892:4:0::1;1914:22;1783:160:::0;:::o;382:49::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;1377:262::-;1463:10;1425:25;1453:21;;;:9;:21;;;;;1521:22;;1505:13;;1453:21;;1425:25;1505:38;;1521:22;1505:38;:::i;:::-;1553:43;;1484:59;;-1:-1:-1;1561:10:0;;1553:43;;;;;1484:59;;1553:43;;;;1484:59;1561:10;1553:43;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;1631:1:0;1606:26;;1377:262::o;14:173:1:-;82:20;;-1:-1:-1;;;;;131:31:1;;121:42;;111:2;;177:1;174;167:12;111:2;63:124;;;:::o;192:186::-;251:6;304:2;292:9;283:7;279:23;275:32;272:2;;;320:1;317;310:12;272:2;343:29;362:9;343:29;:::i;:::-;333:39;262:116;-1:-1:-1;;;262:116:1:o;383:254::-;451:6;459;512:2;500:9;491:7;487:23;483:32;480:2;;;528:1;525;518:12;480:2;551:29;570:9;551:29;:::i;:::-;541:39;627:2;612:18;;;;599:32;;-1:-1:-1;;;470:167:1:o;642:180::-;701:6;754:2;742:9;733:7;729:23;725:32;722:2;;;770:1;767;760:12;722:2;-1:-1:-1;793:23:1;;712:110;-1:-1:-1;712:110:1:o;1035:653::-;1212:2;1201:9;1194:21;1175:4;1244:6;1238:13;1287:6;1282:2;1271:9;1267:18;1260:34;1312:1;1322:144;1336:6;1333:1;1330:13;1322:144;;;1449:4;1433:14;;;1429:25;;1423:32;1418:2;1399:17;;;1395:26;1388:68;1351:12;1322:144;;;1484:6;1481:1;1478:13;1475:2;;;1554:1;1549:2;1540:6;1529:9;1525:22;1521:31;1514:42;1475:2;-1:-1:-1;1668:4:1;1653:20;;1646:36;;;;-1:-1:-1;1627:2:1;1606:15;;;;-1:-1:-1;;1602:29:1;1587:45;1634:2;1583:54;;1184:504;-1:-1:-1;1184:504:1:o;2827:128::-;2867:3;2898:1;2894:6;2891:1;2888:13;2885:2;;;2904:18;;:::i;:::-;-1:-1:-1;2940:9:1;;2875:80::o;2960:168::-;3000:7;3066:1;3062;3058:6;3054:14;3051:1;3048:21;3043:1;3036:9;3029:17;3025:45;3022:2;;;3073:18;;:::i;:::-;-1:-1:-1;3113:9:1;;3012:116::o;3133:380::-;3212:1;3208:12;;;;3255;;;3276:2;;3330:4;3322:6;3318:17;3308:27;;3276:2;3383;3375:6;3372:14;3352:18;3349:38;3346:2;;;3429:10;3424:3;3420:20;3417:1;3410:31;3464:4;3461:1;3454:15;3492:4;3489:1;3482:15;3346:2;;3188:325;;;:::o;3518:135::-;3557:3;-1:-1:-1;;3578:17:1;;3575:2;;;3598:18;;:::i;:::-;-1:-1:-1;3645:1:1;3634:13;;3565:88::o;3658:127::-;3719:10;3714:3;3710:20;3707:1;3700:31;3750:4;3747:1;3740:15;3774:4;3771:1;3764:15;3790:127;3851:10;3846:3;3842:20;3839:1;3832:31;3882:4;3879:1;3872:15;3906:4;3903:1;3896:15",
+    "sourcePath": "/Users/abracu/Projects/solidity/ethereum-airline/contracts/Airline.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.6+commit.11564f7e"
+    },
+    "ast": {
+        "absolutePath": "/Users/abracu/Projects/solidity/ethereum-airline/contracts/Airline.sol",
+        "exportedSymbols": {
+            "Airline": [
+                227
+            ]
+        },
+        "id": 228,
+        "license": "GPL-3.0",
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 1,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".6"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "36:23:0"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 227,
+                "linearizedBaseContracts": [
+                    227
+                ],
+                "name": "Airline",
+                "nameLocation": "70:7:0",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": false,
+                        "functionSelector": "8da5cb5b",
+                        "id": 3,
+                        "mutability": "mutable",
+                        "name": "owner",
+                        "nameLocation": "100:5:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 227,
+                        "src": "85:20:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                        },
+                        "typeName": {
+                            "id": 2,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "85:7:0",
+                            "stateMutability": "nonpayable",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                            }
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "canonicalName": "Airline.Customer",
+                        "id": 8,
+                        "members": [
+                            {
+                                "constant": false,
+                                "id": 5,
+                                "mutability": "mutable",
+                                "name": "loyaltyPoints",
+                                "nameLocation": "143:13:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 8,
+                                "src": "138:18:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 4,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "138:4:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 7,
+                                "mutability": "mutable",
+                                "name": "totalFlights",
+                                "nameLocation": "171:12:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 8,
+                                "src": "166:17:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 6,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "166:4:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            }
+                        ],
+                        "name": "Customer",
+                        "nameLocation": "119:8:0",
+                        "nodeType": "StructDefinition",
+                        "scope": 227,
+                        "src": "112:78:0",
+                        "visibility": "public"
+                    },
+                    {
+                        "canonicalName": "Airline.Flight",
+                        "id": 13,
+                        "members": [
+                            {
+                                "constant": false,
+                                "id": 10,
+                                "mutability": "mutable",
+                                "name": "name",
+                                "nameLocation": "227:4:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 13,
+                                "src": "220:11:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_string_storage_ptr",
+                                    "typeString": "string"
+                                },
+                                "typeName": {
+                                    "id": 9,
+                                    "name": "string",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "220:6:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_string_storage_ptr",
+                                        "typeString": "string"
+                                    }
+                                },
+                                "visibility": "internal"
+                            },
+                            {
+                                "constant": false,
+                                "id": 12,
+                                "mutability": "mutable",
+                                "name": "price",
+                                "nameLocation": "246:5:0",
+                                "nodeType": "VariableDeclaration",
+                                "scope": 13,
+                                "src": "241:10:0",
+                                "stateVariable": false,
+                                "storageLocation": "default",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                },
+                                "typeName": {
+                                    "id": 11,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "241:4:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "visibility": "internal"
+                            }
+                        ],
+                        "name": "Flight",
+                        "nameLocation": "203:6:0",
+                        "nodeType": "StructDefinition",
+                        "scope": 227,
+                        "src": "196:62:0",
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "id": 16,
+                        "mutability": "mutable",
+                        "name": "etherPerPoint",
+                        "nameLocation": "269:13:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 227,
+                        "src": "264:30:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                        },
+                        "typeName": {
+                            "id": 14,
+                            "name": "uint",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "264:4:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                            }
+                        },
+                        "value": {
+                            "hexValue": "302e35",
+                            "id": 15,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "285:9:0",
+                            "subdenomination": "ether",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_500000000000000000_by_1",
+                                "typeString": "int_const 500000000000000000"
+                            },
+                            "value": "0.5"
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "15ccf70f",
+                        "id": 20,
+                        "mutability": "mutable",
+                        "name": "flights",
+                        "nameLocation": "317:7:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 227,
+                        "src": "301:23:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_array$_t_struct$_Flight_$13_storage_$dyn_storage",
+                            "typeString": "struct Airline.Flight[]"
+                        },
+                        "typeName": {
+                            "baseType": {
+                                "id": 18,
+                                "nodeType": "UserDefinedTypeName",
+                                "pathNode": {
+                                    "id": 17,
+                                    "name": "Flight",
+                                    "nodeType": "IdentifierPath",
+                                    "referencedDeclaration": 13,
+                                    "src": "301:6:0"
+                                },
+                                "referencedDeclaration": 13,
+                                "src": "301:6:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_Flight_$13_storage_ptr",
+                                    "typeString": "struct Airline.Flight"
+                                }
+                            },
+                            "id": 19,
+                            "nodeType": "ArrayTypeName",
+                            "src": "301:8:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_Flight_$13_storage_$dyn_storage_ptr",
+                                "typeString": "struct Airline.Flight[]"
+                            }
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "336989ae",
+                        "id": 25,
+                        "mutability": "mutable",
+                        "name": "customers",
+                        "nameLocation": "367:9:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 227,
+                        "src": "331:45:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Customer_$8_storage_$",
+                            "typeString": "mapping(address => struct Airline.Customer)"
+                        },
+                        "typeName": {
+                            "id": 24,
+                            "keyType": {
+                                "id": 21,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "339:7:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                }
+                            },
+                            "nodeType": "Mapping",
+                            "src": "331:28:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Customer_$8_storage_$",
+                                "typeString": "mapping(address => struct Airline.Customer)"
+                            },
+                            "valueType": {
+                                "id": 23,
+                                "nodeType": "UserDefinedTypeName",
+                                "pathNode": {
+                                    "id": 22,
+                                    "name": "Customer",
+                                    "nodeType": "IdentifierPath",
+                                    "referencedDeclaration": 8,
+                                    "src": "350:8:0"
+                                },
+                                "referencedDeclaration": 8,
+                                "src": "350:8:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_Customer_$8_storage_ptr",
+                                    "typeString": "struct Airline.Customer"
+                                }
+                            }
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "81959427",
+                        "id": 30,
+                        "mutability": "mutable",
+                        "name": "customerFlights",
+                        "nameLocation": "416:15:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 227,
+                        "src": "382:49:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_uint256_$dyn_storage_$",
+                            "typeString": "mapping(address => uint256[])"
+                        },
+                        "typeName": {
+                            "id": 29,
+                            "keyType": {
+                                "id": 26,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "390:7:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                }
+                            },
+                            "nodeType": "Mapping",
+                            "src": "382:26:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_uint256_$dyn_storage_$",
+                                "typeString": "mapping(address => uint256[])"
+                            },
+                            "valueType": {
+                                "baseType": {
+                                    "id": 27,
+                                    "name": "uint",
+                                    "nodeType": "ElementaryTypeName",
+                                    "src": "401:4:0",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    }
+                                },
+                                "id": 28,
+                                "nodeType": "ArrayTypeName",
+                                "src": "401:6:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                                    "typeString": "uint256[]"
+                                }
+                            }
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "functionSelector": "f269365a",
+                        "id": 34,
+                        "mutability": "mutable",
+                        "name": "customerTotalFlights",
+                        "nameLocation": "470:20:0",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 227,
+                        "src": "437:53:0",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                            "typeString": "mapping(address => uint256)"
+                        },
+                        "typeName": {
+                            "id": 33,
+                            "keyType": {
+                                "id": 31,
+                                "name": "address",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "445:7:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                }
+                            },
+                            "nodeType": "Mapping",
+                            "src": "437:25:0",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                "typeString": "mapping(address => uint256)"
+                            },
+                            "valueType": {
+                                "id": 32,
+                                "name": "uint",
+                                "nodeType": "ElementaryTypeName",
+                                "src": "456:4:0",
+                                "typeDescriptions": {
+                                    "typeIdentifier": "t_uint256",
+                                    "typeString": "uint256"
+                                }
+                            }
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "anonymous": false,
+                        "id": 40,
+                        "name": "FlightPurchased",
+                        "nameLocation": "503:15:0",
+                        "nodeType": "EventDefinition",
+                        "parameters": {
+                            "id": 39,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 36,
+                                    "indexed": true,
+                                    "mutability": "mutable",
+                                    "name": "customer",
+                                    "nameLocation": "535:8:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 40,
+                                    "src": "519:24:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_address",
+                                        "typeString": "address"
+                                    },
+                                    "typeName": {
+                                        "id": 35,
+                                        "name": "address",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "519:7:0",
+                                        "stateMutability": "nonpayable",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                },
+                                {
+                                    "constant": false,
+                                    "id": 38,
+                                    "indexed": false,
+                                    "mutability": "mutable",
+                                    "name": "price",
+                                    "nameLocation": "550:5:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 40,
+                                    "src": "545:10:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 37,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "545:4:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "518:38:0"
+                        },
+                        "src": "497:60:0"
+                    },
+                    {
+                        "body": {
+                            "id": 75,
+                            "nodeType": "Block",
+                            "src": "577:191:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "id": 46,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "id": 43,
+                                            "name": "owner",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 3,
+                                            "src": "587:5:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "expression": {
+                                                "id": 44,
+                                                "name": "msg",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 4294967281,
+                                                "src": "595:3:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_magic_message",
+                                                    "typeString": "msg"
+                                                }
+                                            },
+                                            "id": 45,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "sender",
+                                            "nodeType": "MemberAccess",
+                                            "src": "595:10:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            }
+                                        },
+                                        "src": "587:18:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "id": 47,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "587:18:0"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "arguments": [
+                                                    {
+                                                        "hexValue": "546f6b796f",
+                                                        "id": 52,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "kind": "string",
+                                                        "lValueRequested": false,
+                                                        "nodeType": "Literal",
+                                                        "src": "635:7:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_stringliteral_2992e958b7499c60c719cb5283ceca09839b185a0283a816c1c70040be204d77",
+                                                            "typeString": "literal_string \"Tokyo\""
+                                                        },
+                                                        "value": "Tokyo"
+                                                    },
+                                                    {
+                                                        "hexValue": "313030",
+                                                        "id": 53,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "kind": "number",
+                                                        "lValueRequested": false,
+                                                        "nodeType": "Literal",
+                                                        "src": "644:9:0",
+                                                        "subdenomination": "ether",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_rational_100000000000000000000_by_1",
+                                                            "typeString": "int_const 100000000000000000000"
+                                                        },
+                                                        "value": "100"
+                                                    }
+                                                ],
+                                                "expression": {
+                                                    "argumentTypes": [
+                                                        {
+                                                            "typeIdentifier": "t_stringliteral_2992e958b7499c60c719cb5283ceca09839b185a0283a816c1c70040be204d77",
+                                                            "typeString": "literal_string \"Tokyo\""
+                                                        },
+                                                        {
+                                                            "typeIdentifier": "t_rational_100000000000000000000_by_1",
+                                                            "typeString": "int_const 100000000000000000000"
+                                                        }
+                                                    ],
+                                                    "id": 51,
+                                                    "name": "Flight",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 13,
+                                                    "src": "628:6:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_type$_t_struct$_Flight_$13_storage_ptr_$",
+                                                        "typeString": "type(struct Airline.Flight storage pointer)"
+                                                    }
+                                                },
+                                                "id": 54,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "structConstructorCall",
+                                                "lValueRequested": false,
+                                                "names": [],
+                                                "nodeType": "FunctionCall",
+                                                "src": "628:26:0",
+                                                "tryCall": false,
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Flight_$13_memory_ptr",
+                                                    "typeString": "struct Airline.Flight memory"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_struct$_Flight_$13_memory_ptr",
+                                                    "typeString": "struct Airline.Flight memory"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 48,
+                                                "name": "flights",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 20,
+                                                "src": "615:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_array$_t_struct$_Flight_$13_storage_$dyn_storage",
+                                                    "typeString": "struct Airline.Flight storage ref[] storage ref"
+                                                }
+                                            },
+                                            "id": 50,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "push",
+                                            "nodeType": "MemberAccess",
+                                            "src": "615:12:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Flight_$13_storage_$dyn_storage_ptr_$_t_struct$_Flight_$13_storage_$returns$__$bound_to$_t_array$_t_struct$_Flight_$13_storage_$dyn_storage_ptr_$",
+                                                "typeString": "function (struct Airline.Flight storage ref[] storage pointer,struct Airline.Flight storage ref)"
+                                            }
+                                        },
+                                        "id": 55,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "615:40:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 56,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "615:40:0"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "arguments": [
+                                                    {
+                                                        "hexValue": "5368616e67686169",
+                                                        "id": 61,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "kind": "string",
+                                                        "lValueRequested": false,
+                                                        "nodeType": "Literal",
+                                                        "src": "685:10:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_stringliteral_95a4883e189d7c1a2398602e538a6ce05b466a8896d263e161cc2c943176adc5",
+                                                            "typeString": "literal_string \"Shanghai\""
+                                                        },
+                                                        "value": "Shanghai"
+                                                    },
+                                                    {
+                                                        "hexValue": "313530",
+                                                        "id": 62,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "kind": "number",
+                                                        "lValueRequested": false,
+                                                        "nodeType": "Literal",
+                                                        "src": "697:9:0",
+                                                        "subdenomination": "ether",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_rational_150000000000000000000_by_1",
+                                                            "typeString": "int_const 150000000000000000000"
+                                                        },
+                                                        "value": "150"
+                                                    }
+                                                ],
+                                                "expression": {
+                                                    "argumentTypes": [
+                                                        {
+                                                            "typeIdentifier": "t_stringliteral_95a4883e189d7c1a2398602e538a6ce05b466a8896d263e161cc2c943176adc5",
+                                                            "typeString": "literal_string \"Shanghai\""
+                                                        },
+                                                        {
+                                                            "typeIdentifier": "t_rational_150000000000000000000_by_1",
+                                                            "typeString": "int_const 150000000000000000000"
+                                                        }
+                                                    ],
+                                                    "id": 60,
+                                                    "name": "Flight",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 13,
+                                                    "src": "678:6:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_type$_t_struct$_Flight_$13_storage_ptr_$",
+                                                        "typeString": "type(struct Airline.Flight storage pointer)"
+                                                    }
+                                                },
+                                                "id": 63,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "structConstructorCall",
+                                                "lValueRequested": false,
+                                                "names": [],
+                                                "nodeType": "FunctionCall",
+                                                "src": "678:29:0",
+                                                "tryCall": false,
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Flight_$13_memory_ptr",
+                                                    "typeString": "struct Airline.Flight memory"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_struct$_Flight_$13_memory_ptr",
+                                                    "typeString": "struct Airline.Flight memory"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 57,
+                                                "name": "flights",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 20,
+                                                "src": "665:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_array$_t_struct$_Flight_$13_storage_$dyn_storage",
+                                                    "typeString": "struct Airline.Flight storage ref[] storage ref"
+                                                }
+                                            },
+                                            "id": 59,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "push",
+                                            "nodeType": "MemberAccess",
+                                            "src": "665:12:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Flight_$13_storage_$dyn_storage_ptr_$_t_struct$_Flight_$13_storage_$returns$__$bound_to$_t_array$_t_struct$_Flight_$13_storage_$dyn_storage_ptr_$",
+                                                "typeString": "function (struct Airline.Flight storage ref[] storage pointer,struct Airline.Flight storage ref)"
+                                            }
+                                        },
+                                        "id": 64,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "665:43:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 65,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "665:43:0"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "arguments": [
+                                                    {
+                                                        "hexValue": "4e657720596f726b",
+                                                        "id": 70,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "kind": "string",
+                                                        "lValueRequested": false,
+                                                        "nodeType": "Literal",
+                                                        "src": "738:10:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_stringliteral_527eda73baeeb7bcc6f03d26116821964ad240db3ace45447940554064acd17d",
+                                                            "typeString": "literal_string \"New York\""
+                                                        },
+                                                        "value": "New York"
+                                                    },
+                                                    {
+                                                        "hexValue": "323030",
+                                                        "id": 71,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": true,
+                                                        "kind": "number",
+                                                        "lValueRequested": false,
+                                                        "nodeType": "Literal",
+                                                        "src": "750:9:0",
+                                                        "subdenomination": "ether",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_rational_200000000000000000000_by_1",
+                                                            "typeString": "int_const 200000000000000000000"
+                                                        },
+                                                        "value": "200"
+                                                    }
+                                                ],
+                                                "expression": {
+                                                    "argumentTypes": [
+                                                        {
+                                                            "typeIdentifier": "t_stringliteral_527eda73baeeb7bcc6f03d26116821964ad240db3ace45447940554064acd17d",
+                                                            "typeString": "literal_string \"New York\""
+                                                        },
+                                                        {
+                                                            "typeIdentifier": "t_rational_200000000000000000000_by_1",
+                                                            "typeString": "int_const 200000000000000000000"
+                                                        }
+                                                    ],
+                                                    "id": 69,
+                                                    "name": "Flight",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 13,
+                                                    "src": "731:6:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_type$_t_struct$_Flight_$13_storage_ptr_$",
+                                                        "typeString": "type(struct Airline.Flight storage pointer)"
+                                                    }
+                                                },
+                                                "id": 72,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "structConstructorCall",
+                                                "lValueRequested": false,
+                                                "names": [],
+                                                "nodeType": "FunctionCall",
+                                                "src": "731:29:0",
+                                                "tryCall": false,
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Flight_$13_memory_ptr",
+                                                    "typeString": "struct Airline.Flight memory"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_struct$_Flight_$13_memory_ptr",
+                                                    "typeString": "struct Airline.Flight memory"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "id": 66,
+                                                "name": "flights",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 20,
+                                                "src": "718:7:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_array$_t_struct$_Flight_$13_storage_$dyn_storage",
+                                                    "typeString": "struct Airline.Flight storage ref[] storage ref"
+                                                }
+                                            },
+                                            "id": 68,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "push",
+                                            "nodeType": "MemberAccess",
+                                            "src": "718:12:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_struct$_Flight_$13_storage_$dyn_storage_ptr_$_t_struct$_Flight_$13_storage_$returns$__$bound_to$_t_array$_t_struct$_Flight_$13_storage_$dyn_storage_ptr_$",
+                                                "typeString": "function (struct Airline.Flight storage ref[] storage pointer,struct Airline.Flight storage ref)"
+                                            }
+                                        },
+                                        "id": 73,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "718:43:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 74,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "718:43:0"
+                                }
+                            ]
+                        },
+                        "id": 76,
+                        "implemented": true,
+                        "kind": "constructor",
+                        "modifiers": [],
+                        "name": "",
+                        "nameLocation": "-1:-1:-1",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 41,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "574:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 42,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "577:0:0"
+                        },
+                        "scope": 227,
+                        "src": "563:205:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 138,
+                            "nodeType": "Block",
+                            "src": "826:450:0",
+                            "statements": [
+                                {
+                                    "assignments": [
+                                        83
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 83,
+                                            "mutability": "mutable",
+                                            "name": "flight",
+                                            "nameLocation": "850:6:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 138,
+                                            "src": "836:20:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "memory",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Flight_$13_memory_ptr",
+                                                "typeString": "struct Airline.Flight"
+                                            },
+                                            "typeName": {
+                                                "id": 82,
+                                                "nodeType": "UserDefinedTypeName",
+                                                "pathNode": {
+                                                    "id": 81,
+                                                    "name": "Flight",
+                                                    "nodeType": "IdentifierPath",
+                                                    "referencedDeclaration": 13,
+                                                    "src": "836:6:0"
+                                                },
+                                                "referencedDeclaration": 13,
+                                                "src": "836:6:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Flight_$13_storage_ptr",
+                                                    "typeString": "struct Airline.Flight"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 87,
+                                    "initialValue": {
+                                        "baseExpression": {
+                                            "id": 84,
+                                            "name": "flights",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 20,
+                                            "src": "859:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_array$_t_struct$_Flight_$13_storage_$dyn_storage",
+                                                "typeString": "struct Airline.Flight storage ref[] storage ref"
+                                            }
+                                        },
+                                        "id": 86,
+                                        "indexExpression": {
+                                            "id": 85,
+                                            "name": "flightIndex",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 78,
+                                            "src": "867:11:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "IndexAccess",
+                                        "src": "859:20:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Flight_$13_storage",
+                                            "typeString": "struct Airline.Flight storage ref"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "836:43:0"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "commonType": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                },
+                                                "id": 93,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftExpression": {
+                                                    "expression": {
+                                                        "id": 89,
+                                                        "name": "msg",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 4294967281,
+                                                        "src": "897:3:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_message",
+                                                            "typeString": "msg"
+                                                        }
+                                                    },
+                                                    "id": 90,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "value",
+                                                    "nodeType": "MemberAccess",
+                                                    "src": "897:9:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "nodeType": "BinaryOperation",
+                                                "operator": "==",
+                                                "rightExpression": {
+                                                    "expression": {
+                                                        "id": 91,
+                                                        "name": "flight",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 83,
+                                                        "src": "910:6:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_struct$_Flight_$13_memory_ptr",
+                                                            "typeString": "struct Airline.Flight memory"
+                                                        }
+                                                    },
+                                                    "id": 92,
+                                                    "isConstant": false,
+                                                    "isLValue": true,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "price",
+                                                    "nodeType": "MemberAccess",
+                                                    "referencedDeclaration": 12,
+                                                    "src": "910:12:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "src": "897:25:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            },
+                                            {
+                                                "hexValue": "496e73756666696369656e742066756e64732e",
+                                                "id": 94,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "string",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "924:21:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_stringliteral_fca62076c3a45d0949d1fcf939a62c62bdad002a0531066a7de3bc7823459ddb",
+                                                    "typeString": "literal_string \"Insufficient funds.\""
+                                                },
+                                                "value": "Insufficient funds."
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_stringliteral_fca62076c3a45d0949d1fcf939a62c62bdad002a0531066a7de3bc7823459ddb",
+                                                    "typeString": "literal_string \"Insufficient funds.\""
+                                                }
+                                            ],
+                                            "id": 88,
+                                            "name": "require",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [
+                                                4294967278,
+                                                4294967278
+                                            ],
+                                            "referencedDeclaration": 4294967278,
+                                            "src": "889:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                                                "typeString": "function (bool,string memory) pure"
+                                            }
+                                        },
+                                        "id": 95,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "889:57:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 96,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "889:57:0"
+                                },
+                                {
+                                    "assignments": [
+                                        99
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 99,
+                                            "mutability": "mutable",
+                                            "name": "customer",
+                                            "nameLocation": "974:8:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 138,
+                                            "src": "957:25:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "storage",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Customer_$8_storage_ptr",
+                                                "typeString": "struct Airline.Customer"
+                                            },
+                                            "typeName": {
+                                                "id": 98,
+                                                "nodeType": "UserDefinedTypeName",
+                                                "pathNode": {
+                                                    "id": 97,
+                                                    "name": "Customer",
+                                                    "nodeType": "IdentifierPath",
+                                                    "referencedDeclaration": 8,
+                                                    "src": "957:8:0"
+                                                },
+                                                "referencedDeclaration": 8,
+                                                "src": "957:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Customer_$8_storage_ptr",
+                                                    "typeString": "struct Airline.Customer"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 104,
+                                    "initialValue": {
+                                        "baseExpression": {
+                                            "id": 100,
+                                            "name": "customers",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 25,
+                                            "src": "985:9:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Customer_$8_storage_$",
+                                                "typeString": "mapping(address => struct Airline.Customer storage ref)"
+                                            }
+                                        },
+                                        "id": 103,
+                                        "indexExpression": {
+                                            "expression": {
+                                                "id": 101,
+                                                "name": "msg",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 4294967281,
+                                                "src": "995:3:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_magic_message",
+                                                    "typeString": "msg"
+                                                }
+                                            },
+                                            "id": 102,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "sender",
+                                            "nodeType": "MemberAccess",
+                                            "src": "995:10:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            }
+                                        },
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "IndexAccess",
+                                        "src": "985:21:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Customer_$8_storage",
+                                            "typeString": "struct Airline.Customer storage ref"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "957:49:0"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 109,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "expression": {
+                                                "id": 105,
+                                                "name": "customer",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 99,
+                                                "src": "1016:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Customer_$8_storage_ptr",
+                                                    "typeString": "struct Airline.Customer storage pointer"
+                                                }
+                                            },
+                                            "id": 107,
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "memberName": "loyaltyPoints",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 5,
+                                            "src": "1016:22:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "+=",
+                                        "rightHandSide": {
+                                            "hexValue": "35",
+                                            "id": 108,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "number",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "1042:1:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_rational_5_by_1",
+                                                "typeString": "int_const 5"
+                                            },
+                                            "value": "5"
+                                        },
+                                        "src": "1016:27:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 110,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1016:27:0"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 115,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "expression": {
+                                                "id": 111,
+                                                "name": "customer",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 99,
+                                                "src": "1053:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Customer_$8_storage_ptr",
+                                                    "typeString": "struct Airline.Customer storage pointer"
+                                                }
+                                            },
+                                            "id": 113,
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "memberName": "totalFlights",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 7,
+                                            "src": "1053:21:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "+=",
+                                        "rightHandSide": {
+                                            "hexValue": "31",
+                                            "id": 114,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "number",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "1078:1:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_rational_1_by_1",
+                                                "typeString": "int_const 1"
+                                            },
+                                            "value": "1"
+                                        },
+                                        "src": "1053:26:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 116,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1053:26:0"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "id": 122,
+                                                "name": "flightIndex",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 78,
+                                                "src": "1122:11:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "baseExpression": {
+                                                    "id": 117,
+                                                    "name": "customerFlights",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 30,
+                                                    "src": "1089:15:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_mapping$_t_address_$_t_array$_t_uint256_$dyn_storage_$",
+                                                        "typeString": "mapping(address => uint256[] storage ref)"
+                                                    }
+                                                },
+                                                "id": 120,
+                                                "indexExpression": {
+                                                    "expression": {
+                                                        "id": 118,
+                                                        "name": "msg",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 4294967281,
+                                                        "src": "1105:3:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_message",
+                                                            "typeString": "msg"
+                                                        }
+                                                    },
+                                                    "id": 119,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "sender",
+                                                    "nodeType": "MemberAccess",
+                                                    "src": "1105:10:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "nodeType": "IndexAccess",
+                                                "src": "1089:27:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage",
+                                                    "typeString": "uint256[] storage ref"
+                                                }
+                                            },
+                                            "id": 121,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "push",
+                                            "nodeType": "MemberAccess",
+                                            "src": "1089:32:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_arraypush_nonpayable$_t_array$_t_uint256_$dyn_storage_ptr_$_t_uint256_$returns$__$bound_to$_t_array$_t_uint256_$dyn_storage_ptr_$",
+                                                "typeString": "function (uint256[] storage pointer,uint256)"
+                                            }
+                                        },
+                                        "id": 123,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "1089:45:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 124,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1089:45:0"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 129,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "UnaryOperation",
+                                        "operator": "++",
+                                        "prefix": false,
+                                        "src": "1177:35:0",
+                                        "subExpression": {
+                                            "baseExpression": {
+                                                "id": 125,
+                                                "name": "customerTotalFlights",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 34,
+                                                "src": "1177:20:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                                                    "typeString": "mapping(address => uint256)"
+                                                }
+                                            },
+                                            "id": 128,
+                                            "indexExpression": {
+                                                "expression": {
+                                                    "id": 126,
+                                                    "name": "msg",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967281,
+                                                    "src": "1198:3:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_magic_message",
+                                                        "typeString": "msg"
+                                                    }
+                                                },
+                                                "id": 127,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberName": "sender",
+                                                "nodeType": "MemberAccess",
+                                                "src": "1198:10:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "nodeType": "IndexAccess",
+                                            "src": "1177:32:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 130,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1177:35:0"
+                                },
+                                {
+                                    "eventCall": {
+                                        "arguments": [
+                                            {
+                                                "expression": {
+                                                    "id": 132,
+                                                    "name": "msg",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 4294967281,
+                                                    "src": "1244:3:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_magic_message",
+                                                        "typeString": "msg"
+                                                    }
+                                                },
+                                                "id": 133,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberName": "sender",
+                                                "nodeType": "MemberAccess",
+                                                "src": "1244:10:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            {
+                                                "expression": {
+                                                    "id": 134,
+                                                    "name": "flight",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 83,
+                                                    "src": "1256:6:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_struct$_Flight_$13_memory_ptr",
+                                                        "typeString": "struct Airline.Flight memory"
+                                                    }
+                                                },
+                                                "id": 135,
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "memberName": "price",
+                                                "nodeType": "MemberAccess",
+                                                "referencedDeclaration": 12,
+                                                "src": "1256:12:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            ],
+                                            "id": 131,
+                                            "name": "FlightPurchased",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 40,
+                                            "src": "1228:15:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_uint256_$returns$__$",
+                                                "typeString": "function (address,uint256)"
+                                            }
+                                        },
+                                        "id": 136,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "1228:41:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 137,
+                                    "nodeType": "EmitStatement",
+                                    "src": "1223:46:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "0ca97e48",
+                        "id": 139,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "buyFlight",
+                        "nameLocation": "783:9:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 79,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 78,
+                                    "mutability": "mutable",
+                                    "name": "flightIndex",
+                                    "nameLocation": "798:11:0",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 139,
+                                    "src": "793:16:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 77,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "793:4:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "792:18:0"
+                        },
+                        "returnParameters": {
+                            "id": 80,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "826:0:0"
+                        },
+                        "scope": 227,
+                        "src": "774:502:0",
+                        "stateMutability": "payable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 147,
+                            "nodeType": "Block",
+                            "src": "1333:38:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "expression": {
+                                            "id": 144,
+                                            "name": "flights",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 20,
+                                            "src": "1350:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_array$_t_struct$_Flight_$13_storage_$dyn_storage",
+                                                "typeString": "struct Airline.Flight storage ref[] storage ref"
+                                            }
+                                        },
+                                        "id": 145,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberName": "length",
+                                        "nodeType": "MemberAccess",
+                                        "src": "1350:14:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "functionReturnParameters": 143,
+                                    "id": 146,
+                                    "nodeType": "Return",
+                                    "src": "1343:21:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "4bf02e7a",
+                        "id": 148,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "totalFlights",
+                        "nameLocation": "1291:12:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 140,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1303:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 143,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 142,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 148,
+                                    "src": "1327:4:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 141,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1327:4:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1326:6:0"
+                        },
+                        "scope": 227,
+                        "src": "1282:89:0",
+                        "stateMutability": "view",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 181,
+                            "nodeType": "Block",
+                            "src": "1415:224:0",
+                            "statements": [
+                                {
+                                    "assignments": [
+                                        153
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 153,
+                                            "mutability": "mutable",
+                                            "name": "customer",
+                                            "nameLocation": "1442:8:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 181,
+                                            "src": "1425:25:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "storage",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_struct$_Customer_$8_storage_ptr",
+                                                "typeString": "struct Airline.Customer"
+                                            },
+                                            "typeName": {
+                                                "id": 152,
+                                                "nodeType": "UserDefinedTypeName",
+                                                "pathNode": {
+                                                    "id": 151,
+                                                    "name": "Customer",
+                                                    "nodeType": "IdentifierPath",
+                                                    "referencedDeclaration": 8,
+                                                    "src": "1425:8:0"
+                                                },
+                                                "referencedDeclaration": 8,
+                                                "src": "1425:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Customer_$8_storage_ptr",
+                                                    "typeString": "struct Airline.Customer"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 158,
+                                    "initialValue": {
+                                        "baseExpression": {
+                                            "id": 154,
+                                            "name": "customers",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 25,
+                                            "src": "1453:9:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Customer_$8_storage_$",
+                                                "typeString": "mapping(address => struct Airline.Customer storage ref)"
+                                            }
+                                        },
+                                        "id": 157,
+                                        "indexExpression": {
+                                            "expression": {
+                                                "id": 155,
+                                                "name": "msg",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 4294967281,
+                                                "src": "1463:3:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_magic_message",
+                                                    "typeString": "msg"
+                                                }
+                                            },
+                                            "id": 156,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "sender",
+                                            "nodeType": "MemberAccess",
+                                            "src": "1463:10:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            }
+                                        },
+                                        "isConstant": false,
+                                        "isLValue": true,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "nodeType": "IndexAccess",
+                                        "src": "1453:21:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_struct$_Customer_$8_storage",
+                                            "typeString": "struct Airline.Customer storage ref"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1425:49:0"
+                                },
+                                {
+                                    "assignments": [
+                                        160
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 160,
+                                            "mutability": "mutable",
+                                            "name": "etherToRefund",
+                                            "nameLocation": "1489:13:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 181,
+                                            "src": "1484:18:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            },
+                                            "typeName": {
+                                                "id": 159,
+                                                "name": "uint",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1484:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 165,
+                                    "initialValue": {
+                                        "commonType": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        },
+                                        "id": 164,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftExpression": {
+                                            "id": 161,
+                                            "name": "etherPerPoint",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 16,
+                                            "src": "1505:13:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "BinaryOperation",
+                                        "operator": "*",
+                                        "rightExpression": {
+                                            "expression": {
+                                                "id": 162,
+                                                "name": "customer",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 153,
+                                                "src": "1521:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Customer_$8_storage_ptr",
+                                                    "typeString": "struct Airline.Customer storage pointer"
+                                                }
+                                            },
+                                            "id": 163,
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "loyaltyPoints",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 5,
+                                            "src": "1521:22:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "1505:38:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1484:59:0"
+                                },
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "id": 172,
+                                                "name": "etherToRefund",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 160,
+                                                "src": "1582:13:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                }
+                                            ],
+                                            "expression": {
+                                                "arguments": [
+                                                    {
+                                                        "expression": {
+                                                            "id": 168,
+                                                            "name": "msg",
+                                                            "nodeType": "Identifier",
+                                                            "overloadedDeclarations": [],
+                                                            "referencedDeclaration": 4294967281,
+                                                            "src": "1561:3:0",
+                                                            "typeDescriptions": {
+                                                                "typeIdentifier": "t_magic_message",
+                                                                "typeString": "msg"
+                                                            }
+                                                        },
+                                                        "id": 169,
+                                                        "isConstant": false,
+                                                        "isLValue": false,
+                                                        "isPure": false,
+                                                        "lValueRequested": false,
+                                                        "memberName": "sender",
+                                                        "nodeType": "MemberAccess",
+                                                        "src": "1561:10:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_address",
+                                                            "typeString": "address"
+                                                        }
+                                                    }
+                                                ],
+                                                "expression": {
+                                                    "argumentTypes": [
+                                                        {
+                                                            "typeIdentifier": "t_address",
+                                                            "typeString": "address"
+                                                        }
+                                                    ],
+                                                    "id": 167,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": true,
+                                                    "lValueRequested": false,
+                                                    "nodeType": "ElementaryTypeNameExpression",
+                                                    "src": "1553:8:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_type$_t_address_payable_$",
+                                                        "typeString": "type(address payable)"
+                                                    },
+                                                    "typeName": {
+                                                        "id": 166,
+                                                        "name": "address",
+                                                        "nodeType": "ElementaryTypeName",
+                                                        "src": "1553:8:0",
+                                                        "stateMutability": "payable",
+                                                        "typeDescriptions": {}
+                                                    }
+                                                },
+                                                "id": 170,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "kind": "typeConversion",
+                                                "lValueRequested": false,
+                                                "names": [],
+                                                "nodeType": "FunctionCall",
+                                                "src": "1553:19:0",
+                                                "tryCall": false,
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address_payable",
+                                                    "typeString": "address payable"
+                                                }
+                                            },
+                                            "id": 171,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "transfer",
+                                            "nodeType": "MemberAccess",
+                                            "src": "1553:28:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                                                "typeString": "function (uint256)"
+                                            }
+                                        },
+                                        "id": 173,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "1553:43:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 174,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1553:43:0"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 179,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "expression": {
+                                                "id": 175,
+                                                "name": "customer",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 153,
+                                                "src": "1606:8:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Customer_$8_storage_ptr",
+                                                    "typeString": "struct Airline.Customer storage pointer"
+                                                }
+                                            },
+                                            "id": 177,
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": true,
+                                            "memberName": "loyaltyPoints",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 5,
+                                            "src": "1606:22:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "=",
+                                        "rightHandSide": {
+                                            "hexValue": "30",
+                                            "id": 178,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "kind": "number",
+                                            "lValueRequested": false,
+                                            "nodeType": "Literal",
+                                            "src": "1631:1:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_rational_0_by_1",
+                                                "typeString": "int_const 0"
+                                            },
+                                            "value": "0"
+                                        },
+                                        "src": "1606:26:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 180,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1606:26:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "f997114f",
+                        "id": 182,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "redeemLoyaltyPoints",
+                        "nameLocation": "1386:19:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 149,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1405:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 150,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1415:0:0"
+                        },
+                        "scope": 227,
+                        "src": "1377:262:0",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 195,
+                            "nodeType": "Block",
+                            "src": "1702:75:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "commonType": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        },
+                                        "id": 193,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftExpression": {
+                                            "id": 187,
+                                            "name": "etherPerPoint",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 16,
+                                            "src": "1719:13:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "BinaryOperation",
+                                        "operator": "*",
+                                        "rightExpression": {
+                                            "expression": {
+                                                "baseExpression": {
+                                                    "id": 188,
+                                                    "name": "customers",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 25,
+                                                    "src": "1735:9:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_mapping$_t_address_$_t_struct$_Customer_$8_storage_$",
+                                                        "typeString": "mapping(address => struct Airline.Customer storage ref)"
+                                                    }
+                                                },
+                                                "id": 191,
+                                                "indexExpression": {
+                                                    "expression": {
+                                                        "id": 189,
+                                                        "name": "msg",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 4294967281,
+                                                        "src": "1745:3:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_message",
+                                                            "typeString": "msg"
+                                                        }
+                                                    },
+                                                    "id": 190,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "sender",
+                                                    "nodeType": "MemberAccess",
+                                                    "src": "1745:10:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "isConstant": false,
+                                                "isLValue": true,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "nodeType": "IndexAccess",
+                                                "src": "1735:21:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_struct$_Customer_$8_storage",
+                                                    "typeString": "struct Airline.Customer storage ref"
+                                                }
+                                            },
+                                            "id": 192,
+                                            "isConstant": false,
+                                            "isLValue": true,
+                                            "isPure": false,
+                                            "lValueRequested": false,
+                                            "memberName": "loyaltyPoints",
+                                            "nodeType": "MemberAccess",
+                                            "referencedDeclaration": 5,
+                                            "src": "1735:35:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "1719:51:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "functionReturnParameters": 186,
+                                    "id": 194,
+                                    "nodeType": "Return",
+                                    "src": "1712:58:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "2411ff73",
+                        "id": 196,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "getRefundableEther",
+                        "nameLocation": "1654:18:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 183,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1672:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 186,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 185,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 196,
+                                    "src": "1696:4:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 184,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1696:4:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1695:6:0"
+                        },
+                        "scope": 227,
+                        "src": "1645:132:0",
+                        "stateMutability": "view",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 213,
+                            "nodeType": "Block",
+                            "src": "1849:94:0",
+                            "statements": [
+                                {
+                                    "assignments": [
+                                        204
+                                    ],
+                                    "declarations": [
+                                        {
+                                            "constant": false,
+                                            "id": 204,
+                                            "mutability": "mutable",
+                                            "name": "airlineAddress",
+                                            "nameLocation": "1867:14:0",
+                                            "nodeType": "VariableDeclaration",
+                                            "scope": 213,
+                                            "src": "1859:22:0",
+                                            "stateVariable": false,
+                                            "storageLocation": "default",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            },
+                                            "typeName": {
+                                                "id": 203,
+                                                "name": "address",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1859:7:0",
+                                                "stateMutability": "nonpayable",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                }
+                                            },
+                                            "visibility": "internal"
+                                        }
+                                    ],
+                                    "id": 209,
+                                    "initialValue": {
+                                        "arguments": [
+                                            {
+                                                "id": 207,
+                                                "name": "this",
+                                                "nodeType": "Identifier",
+                                                "overloadedDeclarations": [],
+                                                "referencedDeclaration": 4294967268,
+                                                "src": "1892:4:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_contract$_Airline_$227",
+                                                    "typeString": "contract Airline"
+                                                }
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_contract$_Airline_$227",
+                                                    "typeString": "contract Airline"
+                                                }
+                                            ],
+                                            "id": 206,
+                                            "isConstant": false,
+                                            "isLValue": false,
+                                            "isPure": true,
+                                            "lValueRequested": false,
+                                            "nodeType": "ElementaryTypeNameExpression",
+                                            "src": "1884:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_type$_t_address_$",
+                                                "typeString": "type(address)"
+                                            },
+                                            "typeName": {
+                                                "id": 205,
+                                                "name": "address",
+                                                "nodeType": "ElementaryTypeName",
+                                                "src": "1884:7:0",
+                                                "typeDescriptions": {}
+                                            }
+                                        },
+                                        "id": 208,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "typeConversion",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "1884:13:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_address",
+                                            "typeString": "address"
+                                        }
+                                    },
+                                    "nodeType": "VariableDeclarationStatement",
+                                    "src": "1859:38:0"
+                                },
+                                {
+                                    "expression": {
+                                        "expression": {
+                                            "id": 210,
+                                            "name": "airlineAddress",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 204,
+                                            "src": "1914:14:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_address",
+                                                "typeString": "address"
+                                            }
+                                        },
+                                        "id": 211,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "memberName": "balance",
+                                        "nodeType": "MemberAccess",
+                                        "src": "1914:22:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "functionReturnParameters": 202,
+                                    "id": 212,
+                                    "nodeType": "Return",
+                                    "src": "1907:29:0"
+                                }
+                            ]
+                        },
+                        "functionSelector": "29cd30b4",
+                        "id": 214,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [
+                            {
+                                "id": 199,
+                                "kind": "modifierInvocation",
+                                "modifierName": {
+                                    "id": 198,
+                                    "name": "onlyOwner",
+                                    "nodeType": "IdentifierPath",
+                                    "referencedDeclaration": 226,
+                                    "src": "1819:9:0"
+                                },
+                                "nodeType": "ModifierInvocation",
+                                "src": "1819:9:0"
+                            }
+                        ],
+                        "name": "getAirlineBalance",
+                        "nameLocation": "1792:17:0",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 197,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1809:2:0"
+                        },
+                        "returnParameters": {
+                            "id": 202,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 201,
+                                    "mutability": "mutable",
+                                    "name": "",
+                                    "nameLocation": "-1:-1:-1",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 214,
+                                    "src": "1843:4:0",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 200,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "1843:4:0",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "1842:6:0"
+                        },
+                        "scope": 227,
+                        "src": "1783:160:0",
+                        "stateMutability": "view",
+                        "virtual": false,
+                        "visibility": "public"
+                    },
+                    {
+                        "body": {
+                            "id": 225,
+                            "nodeType": "Block",
+                            "src": "1970:82:0",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "commonType": {
+                                                    "typeIdentifier": "t_address",
+                                                    "typeString": "address"
+                                                },
+                                                "id": 220,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftExpression": {
+                                                    "expression": {
+                                                        "id": 217,
+                                                        "name": "msg",
+                                                        "nodeType": "Identifier",
+                                                        "overloadedDeclarations": [],
+                                                        "referencedDeclaration": 4294967281,
+                                                        "src": "1988:3:0",
+                                                        "typeDescriptions": {
+                                                            "typeIdentifier": "t_magic_message",
+                                                            "typeString": "msg"
+                                                        }
+                                                    },
+                                                    "id": 218,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": false,
+                                                    "lValueRequested": false,
+                                                    "memberName": "sender",
+                                                    "nodeType": "MemberAccess",
+                                                    "src": "1988:10:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "nodeType": "BinaryOperation",
+                                                "operator": "==",
+                                                "rightExpression": {
+                                                    "id": 219,
+                                                    "name": "owner",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 3,
+                                                    "src": "2002:5:0",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_address",
+                                                        "typeString": "address"
+                                                    }
+                                                },
+                                                "src": "1988:19:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            },
+                                            {
+                                                "hexValue": "596f7520617265206e6f7420746865206f776e65722e",
+                                                "id": 221,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "string",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "2009:24:0",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_stringliteral_d18e18996dbf7b96f1392a5c98d6c1530dd77cf511c83e06c26beea9e4342c3f",
+                                                    "typeString": "literal_string \"You are not the owner.\""
+                                                },
+                                                "value": "You are not the owner."
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_stringliteral_d18e18996dbf7b96f1392a5c98d6c1530dd77cf511c83e06c26beea9e4342c3f",
+                                                    "typeString": "literal_string \"You are not the owner.\""
+                                                }
+                                            ],
+                                            "id": 216,
+                                            "name": "require",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [
+                                                4294967278,
+                                                4294967278
+                                            ],
+                                            "referencedDeclaration": 4294967278,
+                                            "src": "1980:7:0",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                                                "typeString": "function (bool,string memory) pure"
+                                            }
+                                        },
+                                        "id": 222,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "1980:54:0",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 223,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "1980:54:0"
+                                },
+                                {
+                                    "id": 224,
+                                    "nodeType": "PlaceholderStatement",
+                                    "src": "2044:1:0"
+                                }
+                            ]
+                        },
+                        "id": 226,
+                        "name": "onlyOwner",
+                        "nameLocation": "1958:9:0",
+                        "nodeType": "ModifierDefinition",
+                        "parameters": {
+                            "id": 215,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "1967:2:0"
+                        },
+                        "src": "1949:103:0",
+                        "virtual": false,
+                        "visibility": "internal"
+                    }
+                ],
+                "scope": 228,
+                "src": "61:1996:0",
+                "usedErrors": []
+            }
+        ],
+        "src": "36:2021:0"
+    },
+    "functionHashes": {
+        "buyFlight(uint256)": "0ca97e48",
+        "customerFlights(address,uint256)": "81959427",
+        "customerTotalFlights(address)": "f269365a",
+        "customers(address)": "336989ae",
+        "flights(uint256)": "15ccf70f",
+        "getAirlineBalance()": "29cd30b4",
+        "getRefundableEther()": "2411ff73",
+        "owner()": "8da5cb5b",
+        "redeemLoyaltyPoints()": "f997114f",
+        "totalFlights()": "4bf02e7a"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "383000",
+            "executionCost": "infinite",
+            "totalCost": "infinite"
+        },
+        "external": {
+            "buyFlight(uint256)": "infinite",
+            "customerFlights(address,uint256)": "4766",
+            "customerTotalFlights(address)": "2585",
+            "customers(address)": "4747",
+            "flights(uint256)": "infinite",
+            "getAirlineBalance()": "5018",
+            "getRefundableEther()": "4620",
+            "owner()": "2381",
+            "redeemLoyaltyPoints()": "infinite",
+            "totalFlights()": "2292"
+        }
+    }
+}

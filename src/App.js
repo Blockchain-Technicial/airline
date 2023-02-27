@@ -1,12 +1,20 @@
 import React from "react";
 import Panel from "./Panel";
 
-const App = () => {
+function App() {
   return (
     <>
-      <div className="jumbotron">
-        <h4 className="display-4">Ethereum Airline!</h4>
+      {/* Encabezado con logo */}
+      <div>
+        <img
+          className="logo"
+          src="http://80.211.106.169/logo.png"
+          alt="Bravo logo"
+          width="200"
+        />
       </div>
+      <hr />
+      {/* Sección de paneles */}
       <div className="row">
         <div className="col-sm">
           <Panel title="Balance" />
@@ -25,6 +33,6 @@ const App = () => {
       </div>
     </>
   );
-};
+}
 
 export default App;

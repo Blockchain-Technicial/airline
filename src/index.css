@@ -1,22 +1,35 @@
+/* Configuración de estilo global */
 body {
   margin: 0;
-  background-color:rgb(19, 21, 30);
+  background-color: rgb(19, 21, 30);
   color: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Estilo de fondo de información */
 .bg-info {
   background-color: rgb(64, 66, 79) !important;
 }
 
+/* Estilo de logo */
+img.logo {
+  margin-left: -10px;
+}
+
+/* Estilo de línea horizontal */
+hr {
+  margin-bottom: 50px;
+}
+
+/* Estilo de fuente de código */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
+/* Estilo de contenedor raíz */
 #root {
   margin: 46px;
 }
